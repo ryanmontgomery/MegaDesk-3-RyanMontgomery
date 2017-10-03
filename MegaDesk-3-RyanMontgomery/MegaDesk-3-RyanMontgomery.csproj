@@ -45,6 +45,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddQuote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddQuote.Designer.cs">
+      <DependentUpon>AddQuote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desk.cs" />
+    <Compile Include="DeskQuote.cs" />
+    <Compile Include="DisplayQuote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayQuote.Designer.cs">
+      <DependentUpon>DisplayQuote.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +67,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchQuotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchQuotes.Designer.cs">
+      <DependentUpon>SearchQuotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAllQuotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAllQuotes.Designer.cs">
+      <DependentUpon>ViewAllQuotes.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddQuote.resx">
+      <DependentUpon>AddQuote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
