@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MegaDesk_3_RyanMontgomery
 {
@@ -32,6 +28,7 @@ namespace MegaDesk_3_RyanMontgomery
         public string CustomerName { get; set; }
         public Desk MyDesk { get; set; }
         public int RushDays { get; set; }
+        public string QuoteDateTime { get; set; }
 
         public int SurfaceArea()
         {
@@ -41,7 +38,7 @@ namespace MegaDesk_3_RyanMontgomery
         public float SurfaceAreaPrice()
         {
             if (SurfaceArea() > SURFACE_AREA_BREAK_POINT)
-                return (float)SurfaceArea() - (float)SURFACE_AREA_BREAK_POINT;
+                return ((float)SurfaceArea() - (float)SURFACE_AREA_BREAK_POINT) * EXTRA_SURFACE_AREA_PRICE;
             else
                 return 0;
         }
@@ -108,11 +105,12 @@ namespace MegaDesk_3_RyanMontgomery
             return DeskPrice() + ShippingPrice();
         }
 
-        public DeskQuote(Desk desk, int rushDays, string customerName)
+        public DeskQuote(string customerName, Desk desk, int rushDays, string quoteDateTime)
         {
+            CustomerName = customerName;
             MyDesk = desk;
             RushDays = rushDays;
-            customerName = CustomerName;
+            QuoteDateTime = quoteDateTime;
         }
     }
 }

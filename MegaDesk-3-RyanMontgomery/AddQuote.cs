@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace MegaDesk_3_RyanMontgomery
 {
@@ -20,8 +17,7 @@ namespace MegaDesk_3_RyanMontgomery
 
         private void ComboBoxMaterials_SelectedValueChanged(object sender, EventArgs e)
         {
-            Desk.Materials materials;
-            Enum.TryParse<Desk.Materials>(ComboBoxMaterials.SelectedValue.ToString(), out materials);
+            Enum.TryParse<Desk.Materials>(ComboBoxMaterials.SelectedValue.ToString(), out Desk.Materials materials);
         }
 
         private void AddQuoteCancelButton_Click(object sender, EventArgs e)
@@ -35,10 +31,11 @@ namespace MegaDesk_3_RyanMontgomery
             DepthTextBox.BackColor = Color.White;
             DrawersTextBox.BackColor = Color.White;
 
-            string customerName = CustomerNameTextBox.Text;
+            
             int width;
             int depth;
             int drawers;
+            string customerName = (string)CustomerNameTextBox.Text;
 
             customerName.Replace(',', ' ');
             customerName.Replace('"', ' ');
@@ -50,7 +47,7 @@ namespace MegaDesk_3_RyanMontgomery
             catch (FormatException ex)
             {
                 WidthTextBox.BackColor = Color.Red;
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
                 return;
             }
 
@@ -61,7 +58,7 @@ namespace MegaDesk_3_RyanMontgomery
             catch (FormatException ex)
             {
                 DepthTextBox.BackColor = Color.Red;
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
                 return;
             }
 
@@ -72,7 +69,7 @@ namespace MegaDesk_3_RyanMontgomery
             catch (FormatException ex)
             {
                 DrawersTextBox.BackColor = Color.Red;
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
                 return;
             }
 
@@ -90,31 +87,33 @@ namespace MegaDesk_3_RyanMontgomery
                     daysRushed = 7;
                 else
                     daysRushed = 14;
-                DeskQuote deskQuote = new DeskQuote(new Desk(width, depth, drawers, materials), daysRushed, customerName);
+                
+                DateTime dt = DateTime.Now;
 
-                Console.WriteLine("The cost of the desk is $" + deskQuote.DeskPrice() + ".");
-                Console.WriteLine("The cost of the shipping is $" + deskQuote.ShippingPrice() + ".");
-                Console.WriteLine("The total cost is $" + deskQuote.TotalPrice() + ".");
+                DeskQuote deskQuote = new DeskQuote(customerName, new Desk(width, depth, drawers, materials), daysRushed, dt.ToString("g"));
+                
+                string json = JsonConvert.SerializeObject(deskQuote);
+                File.AppendAllText(@"C:\Users\montg\documents\quotes.json", json);
             }
 
             catch (FormatException ex)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
             }
             catch (InvalidWidthException ex)
             {
                 WidthTextBox.BackColor = Color.Red;
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
             }
             catch (InvalidDepthException ex)
             {
                 DepthTextBox.BackColor = Color.Red;
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
             }
             catch (InvalidDrawersException ex)
             {
                 DrawersTextBox.BackColor = Color.Red;
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
             }
         }
 
