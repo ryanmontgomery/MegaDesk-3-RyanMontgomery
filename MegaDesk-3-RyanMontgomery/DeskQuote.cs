@@ -1,9 +1,7 @@
 ﻿using System;
 
-namespace MegaDesk_3_RyanMontgomery
-{
-    class DeskQuote
-    {
+namespace MegaDesk_3_RyanMontgomery {
+    class DeskQuote {
         public const float BASE_DESK_PRICE = 200;
         public const int SURFACE_AREA_BREAK_POINT = 1000;
         public const int SHIPPING_LARGE_BREAK_POINT = 2000;
@@ -30,47 +28,31 @@ namespace MegaDesk_3_RyanMontgomery
         public int RushDays { get; set; }
         public string QuoteDateTime { get; set; }
 
-        public int SurfaceArea()
-        {
+        public int SurfaceArea() {
             return MyDesk.Width * MyDesk.Depth;
         }
 
-        public float SurfaceAreaPrice()
-        {
+        public float SurfaceAreaPrice() {
             if (SurfaceArea() > SURFACE_AREA_BREAK_POINT)
                 return ((float)SurfaceArea() - (float)SURFACE_AREA_BREAK_POINT) * EXTRA_SURFACE_AREA_PRICE;
             else
                 return 0;
         }
 
-        public float DrawerPrice()
-        {
+        public float DrawerPrice() {
             return (float)MyDesk.Drawers * DRAWER_PRICE;
         }
 
-        public float MaterialPrice()
-        {
-            if (Desk.Materials.Oak == MyDesk.Material)
-                return OAK_PRICE;
-            else if (Desk.Materials.Laminate == MyDesk.Material)
-                return LAMINATE_PRICE;
-            else if (Desk.Materials.Pine == MyDesk.Material)
-                return PINE_PRICE;
-            else if (Desk.Materials.Rosewood == MyDesk.Material)
-                return ROSEWOOD_PRICE;
-            else
-                return VENEER_PRICE;
+        public float MaterialPrice() {
+            return (float)MyDesk.Material;
         }
 
-        public float DeskPrice()
-        {
+        public float DeskPrice() {
             return BASE_DESK_PRICE + SurfaceAreaPrice() + MaterialPrice() + DrawerPrice();
         }
 
-        public float ShippingPrice()
-        {
-            switch (RushDays)
-            {
+        public float ShippingPrice() {
+            switch (RushDays) {
                 case 3:
                     if (SurfaceArea() > SHIPPING_LARGE_BREAK_POINT)
                         return THREE_DAY_LARGE_RUSH_PRICE;
@@ -100,13 +82,11 @@ namespace MegaDesk_3_RyanMontgomery
             }
         }
 
-        public float TotalPrice()
-        {
+        public float TotalPrice() {
             return DeskPrice() + ShippingPrice();
         }
 
-        public DeskQuote(string customerName, Desk desk, int rushDays, string quoteDateTime)
-        {
+        public DeskQuote(string customerName, Desk desk, int rushDays, string quoteDateTime) {
             CustomerName = customerName;
             MyDesk = desk;
             RushDays = rushDays;

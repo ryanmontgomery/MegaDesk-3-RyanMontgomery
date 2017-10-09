@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using System.IO;
+using System.Linq;
 
 namespace MegaDesk_3_RyanMontgomery
 {
@@ -12,7 +13,13 @@ namespace MegaDesk_3_RyanMontgomery
         public AddQuote()
         {
             InitializeComponent();
-            ComboBoxMaterials.DataSource = Enum.GetNames(typeof(Desk.Materials));
+
+            // New version
+            ComboBoxMaterials.DataSource = ((Desk.Materials[])Enum.GetValues(typeof(Desk.Materials))).ToList();
+
+            // Old version
+            //ComboBoxMaterials.DataSource = Enum.GetNames(typeof(Desk.Materials));
+            ;
         }
 
         private void ComboBoxMaterials_SelectedValueChanged(object sender, EventArgs e)

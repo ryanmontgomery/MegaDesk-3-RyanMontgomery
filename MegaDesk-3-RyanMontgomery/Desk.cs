@@ -1,29 +1,27 @@
 ﻿using System;
 
-namespace MegaDesk_3_RyanMontgomery
-{
-    class InvalidWidthException : Exception
-    {
+namespace MegaDesk_3_RyanMontgomery {
+    class InvalidWidthException : Exception {
         public InvalidWidthException(string message)
-            : base(message)
-        { }
+            : base(message) { }
     }
-    class InvalidDepthException : Exception
-    {
+    class InvalidDepthException : Exception {
         public InvalidDepthException(string message)
-            : base(message)
-        { }
+            : base(message) { }
     }
-    class InvalidDrawersException : Exception
-    {
+    class InvalidDrawersException : Exception {
         public InvalidDrawersException(string message)
-            : base(message)
-        { }
+            : base(message) { }
     }
 
-    class Desk
-    {
-        public enum Materials { Oak, Laminate, Pine, Rosewood, Veneer }
+    class Desk {
+        public enum Materials {
+            Oak = (int)DeskQuote.OAK_PRICE,
+            Laminate = (int)DeskQuote.LAMINATE_PRICE,
+            Pine = (int)DeskQuote.PINE_PRICE,
+            Rosewood = (int)DeskQuote.ROSEWOOD_PRICE,
+            Veneer = (int)DeskQuote.VENEER_PRICE
+        }
 
         public const int MIN_WIDTH = 24;
         public const int MAX_WIDTH = 96;
