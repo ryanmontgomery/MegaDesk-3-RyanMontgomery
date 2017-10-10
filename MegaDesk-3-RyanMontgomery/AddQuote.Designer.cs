@@ -54,10 +54,11 @@
             // 
             // AddQuoteCancelButton
             // 
-            this.AddQuoteCancelButton.Location = new System.Drawing.Point(447, 377);
+            this.AddQuoteCancelButton.Location = new System.Drawing.Point(670, 580);
+            this.AddQuoteCancelButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AddQuoteCancelButton.Name = "AddQuoteCancelButton";
-            this.AddQuoteCancelButton.Size = new System.Drawing.Size(90, 25);
-            this.AddQuoteCancelButton.TabIndex = 0;
+            this.AddQuoteCancelButton.Size = new System.Drawing.Size(135, 38);
+            this.AddQuoteCancelButton.TabIndex = 10;
             this.AddQuoteCancelButton.Text = "Cancel";
             this.AddQuoteCancelButton.UseVisualStyleBackColor = true;
             this.AddQuoteCancelButton.Click += new System.EventHandler(this.AddQuoteCancelButton_Click);
@@ -65,10 +66,11 @@
             // SubmitQuoteButton
             // 
             this.SubmitQuoteButton.AutoSize = true;
-            this.SubmitQuoteButton.Location = new System.Drawing.Point(543, 377);
+            this.SubmitQuoteButton.Location = new System.Drawing.Point(814, 580);
+            this.SubmitQuoteButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SubmitQuoteButton.Name = "SubmitQuoteButton";
-            this.SubmitQuoteButton.Size = new System.Drawing.Size(90, 25);
-            this.SubmitQuoteButton.TabIndex = 10;
+            this.SubmitQuoteButton.Size = new System.Drawing.Size(135, 38);
+            this.SubmitQuoteButton.TabIndex = 11;
             this.SubmitQuoteButton.Text = "Request Quote";
             this.SubmitQuoteButton.UseVisualStyleBackColor = true;
             this.SubmitQuoteButton.Click += new System.EventHandler(this.SubmitQuoteButton_Click);
@@ -77,9 +79,10 @@
             // 
             this.EnterWidthLabel.AutoSize = true;
             this.EnterWidthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EnterWidthLabel.Location = new System.Drawing.Point(26, 176);
+            this.EnterWidthLabel.Location = new System.Drawing.Point(39, 271);
+            this.EnterWidthLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EnterWidthLabel.Name = "EnterWidthLabel";
-            this.EnterWidthLabel.Size = new System.Drawing.Size(63, 24);
+            this.EnterWidthLabel.Size = new System.Drawing.Size(96, 32);
             this.EnterWidthLabel.TabIndex = 2;
             this.EnterWidthLabel.Text = "Width:";
             // 
@@ -87,9 +90,10 @@
             // 
             this.EnterDepthLabel.AutoSize = true;
             this.EnterDepthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EnterDepthLabel.Location = new System.Drawing.Point(26, 225);
+            this.EnterDepthLabel.Location = new System.Drawing.Point(39, 346);
+            this.EnterDepthLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EnterDepthLabel.Name = "EnterDepthLabel";
-            this.EnterDepthLabel.Size = new System.Drawing.Size(65, 24);
+            this.EnterDepthLabel.Size = new System.Drawing.Size(99, 32);
             this.EnterDepthLabel.TabIndex = 3;
             this.EnterDepthLabel.Text = "Depth:";
             // 
@@ -97,9 +101,10 @@
             // 
             this.EnterDrawersLabel.AutoSize = true;
             this.EnterDrawersLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EnterDrawersLabel.Location = new System.Drawing.Point(26, 274);
+            this.EnterDrawersLabel.Location = new System.Drawing.Point(39, 422);
+            this.EnterDrawersLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EnterDrawersLabel.Name = "EnterDrawersLabel";
-            this.EnterDrawersLabel.Size = new System.Drawing.Size(84, 24);
+            this.EnterDrawersLabel.Size = new System.Drawing.Size(127, 32);
             this.EnterDrawersLabel.TabIndex = 4;
             this.EnterDrawersLabel.Text = "Drawers:";
             // 
@@ -107,9 +112,10 @@
             // 
             this.EnterMaterialLabel.AutoSize = true;
             this.EnterMaterialLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EnterMaterialLabel.Location = new System.Drawing.Point(26, 326);
+            this.EnterMaterialLabel.Location = new System.Drawing.Point(39, 502);
+            this.EnterMaterialLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EnterMaterialLabel.Name = "EnterMaterialLabel";
-            this.EnterMaterialLabel.Size = new System.Drawing.Size(80, 24);
+            this.EnterMaterialLabel.Size = new System.Drawing.Size(125, 32);
             this.EnterMaterialLabel.TabIndex = 5;
             this.EnterMaterialLabel.Text = "Material:";
             // 
@@ -117,18 +123,20 @@
             // 
             this.RushShippingLabel.AutoSize = true;
             this.RushShippingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RushShippingLabel.Location = new System.Drawing.Point(352, 115);
+            this.RushShippingLabel.Location = new System.Drawing.Point(528, 177);
+            this.RushShippingLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.RushShippingLabel.Name = "RushShippingLabel";
-            this.RushShippingLabel.Size = new System.Drawing.Size(205, 29);
+            this.RushShippingLabel.Size = new System.Drawing.Size(301, 40);
             this.RushShippingLabel.TabIndex = 6;
             this.RushShippingLabel.Text = "Shipping Options:";
             // 
             // DepthTextBox
             // 
             this.DepthTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DepthTextBox.Location = new System.Drawing.Point(132, 220);
+            this.DepthTextBox.Location = new System.Drawing.Point(198, 338);
+            this.DepthTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DepthTextBox.Name = "DepthTextBox";
-            this.DepthTextBox.Size = new System.Drawing.Size(121, 29);
+            this.DepthTextBox.Size = new System.Drawing.Size(180, 39);
             this.DepthTextBox.TabIndex = 3;
             this.toolTipDepth.SetToolTip(this.DepthTextBox, "Enter a depth between 12-48 inches");
             this.DepthTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DepthTextBox_KeyPress);
@@ -136,9 +144,10 @@
             // WidthTextBox
             // 
             this.WidthTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WidthTextBox.Location = new System.Drawing.Point(132, 171);
+            this.WidthTextBox.Location = new System.Drawing.Point(198, 263);
+            this.WidthTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.WidthTextBox.Name = "WidthTextBox";
-            this.WidthTextBox.Size = new System.Drawing.Size(121, 29);
+            this.WidthTextBox.Size = new System.Drawing.Size(180, 39);
             this.WidthTextBox.TabIndex = 2;
             this.toolTipWidth.SetToolTip(this.WidthTextBox, "Enter a width between 24-96 inches");
             this.WidthTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.WidthTextBox_Validating);
@@ -146,9 +155,10 @@
             // DrawersTextBox
             // 
             this.DrawersTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DrawersTextBox.Location = new System.Drawing.Point(132, 269);
+            this.DrawersTextBox.Location = new System.Drawing.Point(198, 414);
+            this.DrawersTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DrawersTextBox.Name = "DrawersTextBox";
-            this.DrawersTextBox.Size = new System.Drawing.Size(121, 29);
+            this.DrawersTextBox.Size = new System.Drawing.Size(180, 39);
             this.DrawersTextBox.TabIndex = 4;
             this.toolTipDrawers.SetToolTip(this.DrawersTextBox, "Enter the number of drawers ranging 0-7");
             // 
@@ -157,9 +167,10 @@
             this.ComboBoxMaterials.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBoxMaterials.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ComboBoxMaterials.FormattingEnabled = true;
-            this.ComboBoxMaterials.Location = new System.Drawing.Point(132, 318);
+            this.ComboBoxMaterials.Location = new System.Drawing.Point(198, 489);
+            this.ComboBoxMaterials.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ComboBoxMaterials.Name = "ComboBoxMaterials";
-            this.ComboBoxMaterials.Size = new System.Drawing.Size(121, 32);
+            this.ComboBoxMaterials.Size = new System.Drawing.Size(180, 40);
             this.ComboBoxMaterials.TabIndex = 5;
             this.ComboBoxMaterials.SelectedValueChanged += new System.EventHandler(this.ComboBoxMaterials_SelectedValueChanged);
             // 
@@ -168,9 +179,10 @@
             this.StandardShippingRadio.AutoSize = true;
             this.StandardShippingRadio.Checked = true;
             this.StandardShippingRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StandardShippingRadio.Location = new System.Drawing.Point(357, 167);
+            this.StandardShippingRadio.Location = new System.Drawing.Point(536, 257);
+            this.StandardShippingRadio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.StandardShippingRadio.Name = "StandardShippingRadio";
-            this.StandardShippingRadio.Size = new System.Drawing.Size(103, 28);
+            this.StandardShippingRadio.Size = new System.Drawing.Size(156, 36);
             this.StandardShippingRadio.TabIndex = 6;
             this.StandardShippingRadio.TabStop = true;
             this.StandardShippingRadio.Text = "Standard";
@@ -180,9 +192,10 @@
             // 
             this.ThreeShippingRadio.AutoSize = true;
             this.ThreeShippingRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThreeShippingRadio.Location = new System.Drawing.Point(357, 201);
+            this.ThreeShippingRadio.Location = new System.Drawing.Point(536, 309);
+            this.ThreeShippingRadio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ThreeShippingRadio.Name = "ThreeShippingRadio";
-            this.ThreeShippingRadio.Size = new System.Drawing.Size(84, 28);
+            this.ThreeShippingRadio.Size = new System.Drawing.Size(127, 36);
             this.ThreeShippingRadio.TabIndex = 7;
             this.ThreeShippingRadio.Text = "3 Days";
             this.ThreeShippingRadio.UseVisualStyleBackColor = true;
@@ -191,9 +204,10 @@
             // 
             this.FiveShippingRadio.AutoSize = true;
             this.FiveShippingRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FiveShippingRadio.Location = new System.Drawing.Point(357, 235);
+            this.FiveShippingRadio.Location = new System.Drawing.Point(536, 362);
+            this.FiveShippingRadio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FiveShippingRadio.Name = "FiveShippingRadio";
-            this.FiveShippingRadio.Size = new System.Drawing.Size(84, 28);
+            this.FiveShippingRadio.Size = new System.Drawing.Size(127, 36);
             this.FiveShippingRadio.TabIndex = 8;
             this.FiveShippingRadio.Text = "5 Days";
             this.FiveShippingRadio.UseVisualStyleBackColor = true;
@@ -202,9 +216,10 @@
             // 
             this.SevenShippingRadio.AutoSize = true;
             this.SevenShippingRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SevenShippingRadio.Location = new System.Drawing.Point(357, 269);
+            this.SevenShippingRadio.Location = new System.Drawing.Point(536, 414);
+            this.SevenShippingRadio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SevenShippingRadio.Name = "SevenShippingRadio";
-            this.SevenShippingRadio.Size = new System.Drawing.Size(84, 28);
+            this.SevenShippingRadio.Size = new System.Drawing.Size(127, 36);
             this.SevenShippingRadio.TabIndex = 9;
             this.SevenShippingRadio.Text = "7 Days";
             this.SevenShippingRadio.UseVisualStyleBackColor = true;
@@ -213,9 +228,10 @@
             // 
             this.DeskSpecificationLabel.AutoSize = true;
             this.DeskSpecificationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeskSpecificationLabel.Location = new System.Drawing.Point(25, 115);
+            this.DeskSpecificationLabel.Location = new System.Drawing.Point(38, 177);
+            this.DeskSpecificationLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DeskSpecificationLabel.Name = "DeskSpecificationLabel";
-            this.DeskSpecificationLabel.Size = new System.Drawing.Size(230, 29);
+            this.DeskSpecificationLabel.Size = new System.Drawing.Size(341, 40);
             this.DeskSpecificationLabel.TabIndex = 16;
             this.DeskSpecificationLabel.Text = "Desk Specifications:";
             // 
@@ -223,25 +239,27 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(25, 19);
+            this.label1.Location = new System.Drawing.Point(38, 29);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 29);
+            this.label1.Size = new System.Drawing.Size(289, 40);
             this.label1.TabIndex = 17;
             this.label1.Text = "Customer Name:";
             // 
             // CustomerNameTextBox
             // 
             this.CustomerNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CustomerNameTextBox.Location = new System.Drawing.Point(30, 64);
+            this.CustomerNameTextBox.Location = new System.Drawing.Point(45, 98);
+            this.CustomerNameTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CustomerNameTextBox.Name = "CustomerNameTextBox";
-            this.CustomerNameTextBox.Size = new System.Drawing.Size(323, 29);
+            this.CustomerNameTextBox.Size = new System.Drawing.Size(482, 39);
             this.CustomerNameTextBox.TabIndex = 1;
             // 
             // AddQuote
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(645, 414);
+            this.ClientSize = new System.Drawing.Size(968, 637);
             this.Controls.Add(this.CustomerNameTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DeskSpecificationLabel);
@@ -260,6 +278,7 @@
             this.Controls.Add(this.EnterWidthLabel);
             this.Controls.Add(this.SubmitQuoteButton);
             this.Controls.Add(this.AddQuoteCancelButton);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "AddQuote";
             this.Text = "New Quote";

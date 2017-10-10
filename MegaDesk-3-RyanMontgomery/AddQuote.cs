@@ -19,7 +19,6 @@ namespace MegaDesk_3_RyanMontgomery
 
             // Old version
             //ComboBoxMaterials.DataSource = Enum.GetNames(typeof(Desk.Materials));
-            ;
         }
 
         private void ComboBoxMaterials_SelectedValueChanged(object sender, EventArgs e)
@@ -100,10 +99,10 @@ namespace MegaDesk_3_RyanMontgomery
                 DeskQuote deskQuote = new DeskQuote(customerName, new Desk(width, depth, drawers, materials), daysRushed, dt.ToString("g"));
                 
                 string json = JsonConvert.SerializeObject(deskQuote);
-                File.AppendAllText(@"C:\Users\montg\documents\quotes.json", json);
-            }
+                File.AppendAllText(path: @"C:\MegaDesk\quotes.json", contents: json);
+                Console.WriteLine(deskQuote.ShippingPrice());
 
-            catch (FormatException ex)
+            } catch (FormatException ex)
             {
                 MessageBox.Show(ex.Message);
             }

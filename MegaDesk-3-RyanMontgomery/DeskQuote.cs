@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace MegaDesk_3_RyanMontgomery {
     class DeskQuote {
@@ -23,6 +24,7 @@ namespace MegaDesk_3_RyanMontgomery {
         public const float SEVEN_DAY_MEDIUM_RUSH_PRICE = 35;
         public const float SEVEN_DAY_LARGE_RUSH_PRICE = 40;
 
+        private float[,] shippingInfo = new float[3, 3];
         public string CustomerName { get; set; }
         public Desk MyDesk { get; set; }
         public int RushDays { get; set; }
@@ -51,36 +53,80 @@ namespace MegaDesk_3_RyanMontgomery {
             return BASE_DESK_PRICE + SurfaceAreaPrice() + MaterialPrice() + DrawerPrice();
         }
 
+        public void ShippingPriceInitialization() {
+            StreamReader file = new StreamReader(@"C:\MegaDesk\rushOrderPrices.txt");
+            String line;
+
+            try {
+                for (int j = 0; j < 3; j++) {
+                    for (int i = 0; i < 3; i++) {
+                        line = file.ReadLine();
+                        shippingInfo[i, j] = float.Parse(line);
+                    }
+                }
+            }
+            catch(Exception ex) {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
         public float ShippingPrice() {
+            int surfaceArea = SurfaceArea();
+            int i, j;
             switch (RushDays) {
                 case 3:
-                    if (SurfaceArea() > SHIPPING_LARGE_BREAK_POINT)
-                        return THREE_DAY_LARGE_RUSH_PRICE;
-                    else if (SurfaceArea() > SHIPPING_MEDIUM_BREAK_POINT)
-                        return THREE_DAY_MEDIUM_RUSH_PRICE;
-                    else
-                        return THREE_DAY_SMALL_RUSH_PRICE;
-
+                    i = 2;
+                    break;
                 case 5:
-                    if (SurfaceArea() > SHIPPING_LARGE_BREAK_POINT)
-                        return FIVE_DAY_LARGE_RUSH_PRICE;
-                    else if (SurfaceArea() > SHIPPING_MEDIUM_BREAK_POINT)
-                        return FIVE_DAY_MEDIUM_RUSH_PRICE;
-                    else
-                        return FIVE_DAY_SMALL_RUSH_PRICE;
-
+                    i = 1;
+                    break;
                 case 7:
-                    if (SurfaceArea() > SHIPPING_LARGE_BREAK_POINT)
-                        return SEVEN_DAY_LARGE_RUSH_PRICE;
-                    else if (SurfaceArea() > SHIPPING_MEDIUM_BREAK_POINT)
-                        return SEVEN_DAY_MEDIUM_RUSH_PRICE;
-                    else
-                        return SEVEN_DAY_SMALL_RUSH_PRICE;
-
+                    i = 0;
+                    break;
                 default:
                     return 0;
             }
+            if (surfaceArea > SHIPPING_LARGE_BREAK_POINT)
+                j = 0;
+            else if (surfaceArea > SHIPPING_MEDIUM_BREAK_POINT)
+                j = 1;
+            else
+                j = 2;
+
+            return shippingInfo[i, j];
         }
+
+        //Old Version
+        //public float _ShippingPrice() {
+        //    switch (RushDays) {
+        //        case 3:
+        //            if (SurfaceArea() > SHIPPING_LARGE_BREAK_POINT)
+        //                return THREE_DAY_LARGE_RUSH_PRICE;
+        //            else if (SurfaceArea() > SHIPPING_MEDIUM_BREAK_POINT)
+        //                return THREE_DAY_MEDIUM_RUSH_PRICE;
+        //            else
+        //                return THREE_DAY_SMALL_RUSH_PRICE;
+
+        //        case 5:
+        //            if (SurfaceArea() > SHIPPING_LARGE_BREAK_POINT)
+        //                return FIVE_DAY_LARGE_RUSH_PRICE;
+        //            else if (SurfaceArea() > SHIPPING_MEDIUM_BREAK_POINT)
+        //                return FIVE_DAY_MEDIUM_RUSH_PRICE;
+        //            else
+        //                return FIVE_DAY_SMALL_RUSH_PRICE;
+
+        //        case 7:
+        //            if (SurfaceArea() > SHIPPING_LARGE_BREAK_POINT)
+        //                return SEVEN_DAY_LARGE_RUSH_PRICE;
+        //            else if (SurfaceArea() > SHIPPING_MEDIUM_BREAK_POINT)
+        //                return SEVEN_DAY_MEDIUM_RUSH_PRICE;
+        //            else
+        //                return SEVEN_DAY_SMALL_RUSH_PRICE;
+
+        //        default:
+        //            return 0;
+        //    }
+        //}
 
         public float TotalPrice() {
             return DeskPrice() + ShippingPrice();
@@ -91,6 +137,7 @@ namespace MegaDesk_3_RyanMontgomery {
             MyDesk = desk;
             RushDays = rushDays;
             QuoteDateTime = quoteDateTime;
+            ShippingPriceInitialization();
         }
     }
 }
