@@ -98,7 +98,7 @@ namespace MegaDesk_3_RyanMontgomery
 
                 DeskQuote deskQuote = new DeskQuote(customerName, new Desk(width, depth, drawers, materials), daysRushed, dt.ToString("g"));
                 
-                string json = JsonConvert.SerializeObject(deskQuote);
+                string json = JsonConvert.SerializeObject(deskQuote) + Environment.NewLine;
                 File.AppendAllText(path: @"C:\MegaDesk\quotes.json", contents: json);
                 Console.WriteLine(deskQuote.ShippingPrice());
 

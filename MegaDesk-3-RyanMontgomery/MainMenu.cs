@@ -46,5 +46,12 @@ namespace MegaDesk_3_RyanMontgomery
         {
             this.Close();
         }
+
+        private void ViewQuotesButton_Click(object sender, EventArgs e) {
+            ViewAllQuotes viewAllQuotes = new ViewAllQuotes();
+            viewAllQuotes.Show();
+            this.Hide();
+            viewAllQuotes.FormClosing += ShowForm;
+        }
     }
 }
