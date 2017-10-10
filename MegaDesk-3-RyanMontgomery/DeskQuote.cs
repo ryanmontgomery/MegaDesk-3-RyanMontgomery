@@ -2,7 +2,7 @@
 using System.IO;
 
 namespace MegaDesk_3_RyanMontgomery {
-    class DeskQuote {
+    public class DeskQuote {
         public const float BASE_DESK_PRICE = 200;
         public const int SURFACE_AREA_BREAK_POINT = 1000;
         public const int SHIPPING_LARGE_BREAK_POINT = 2000;

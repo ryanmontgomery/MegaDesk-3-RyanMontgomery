@@ -14,7 +14,7 @@ namespace MegaDesk_3_RyanMontgomery {
             : base(message) { }
     }
 
-    class Desk {
+    public class Desk {
         public enum Materials {
             Oak = (int)DeskQuote.OAK_PRICE,
             Laminate = (int)DeskQuote.LAMINATE_PRICE,

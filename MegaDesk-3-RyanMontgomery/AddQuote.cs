@@ -100,7 +100,11 @@ namespace MegaDesk_3_RyanMontgomery
                 
                 string json = JsonConvert.SerializeObject(deskQuote) + Environment.NewLine;
                 File.AppendAllText(path: @"C:\MegaDesk\quotes.json", contents: json);
-                Console.WriteLine(deskQuote.ShippingPrice());
+
+                DisplayQuote displayQuote = new DisplayQuote(deskQuote);
+                displayQuote.Show();
+                this.Hide();
+                displayQuote.FormClosing += CloseForm;
 
             } catch (FormatException ex)
             {
@@ -159,6 +163,10 @@ namespace MegaDesk_3_RyanMontgomery
             {
                 DepthTextBox.BackColor = Color.Red;
             }
+        }
+
+        private void CloseForm(object sender, FormClosingEventArgs e) {
+            this.Close();
         }
     }
 }

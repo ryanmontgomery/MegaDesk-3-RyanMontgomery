@@ -121,7 +121,7 @@
             // 
             this.TotalPriceLabel.AutoSize = true;
             this.TotalPriceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalPriceLabel.Location = new System.Drawing.Point(412, 473);
+            this.TotalPriceLabel.Location = new System.Drawing.Point(412, 483);
             this.TotalPriceLabel.Name = "TotalPriceLabel";
             this.TotalPriceLabel.Size = new System.Drawing.Size(162, 32);
             this.TotalPriceLabel.TabIndex = 7;
@@ -190,7 +190,7 @@
             // OutShippingPrice
             // 
             this.OutShippingPrice.AutoSize = true;
-            this.OutShippingPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OutShippingPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OutShippingPrice.Location = new System.Drawing.Point(589, 441);
             this.OutShippingPrice.Name = "OutShippingPrice";
             this.OutShippingPrice.Size = new System.Drawing.Size(116, 32);
@@ -201,7 +201,7 @@
             // 
             this.OutTotalPrice.AutoSize = true;
             this.OutTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OutTotalPrice.Location = new System.Drawing.Point(612, 473);
+            this.OutTotalPrice.Location = new System.Drawing.Point(606, 483);
             this.OutTotalPrice.Name = "OutTotalPrice";
             this.OutTotalPrice.Size = new System.Drawing.Size(99, 32);
             this.OutTotalPrice.TabIndex = 15;
