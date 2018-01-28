@@ -124,8 +124,7 @@ namespace MegaDesk_3_RyanMontgomery
             {
                 DrawersTextBox.BackColor = Color.Red;
                 MessageBox.Show(ex.Message);
-            }
-        }
+            }        }
 
         private void WidthTextBox_Validating(object sender, CancelEventArgs e)
         {
