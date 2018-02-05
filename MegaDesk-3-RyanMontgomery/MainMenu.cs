@@ -53,5 +53,13 @@ namespace MegaDesk_3_RyanMontgomery
             this.Hide();
             viewAllQuotes.FormClosing += ShowForm;
         }
+
+        private void SearchQuotesButton_Click(object sender, EventArgs e)
+        {
+            SearchQuotes searchQuotes = new SearchQuotes();
+            searchQuotes.Show();
+            this.Hide();
+            searchQuotes.FormClosing += ShowForm;
+        }
     }
 }

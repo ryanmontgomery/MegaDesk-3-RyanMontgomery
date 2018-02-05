@@ -34,9 +34,9 @@
             this.DeskMaterialLabel = new System.Windows.Forms.Label();
             this.DrawersLabel = new System.Windows.Forms.Label();
             this.DeskCostLabel = new System.Windows.Forms.Label();
-            this.ShippingTypeLabel = new System.Windows.Forms.Label();
             this.ShippingCostLabel = new System.Windows.Forms.Label();
             this.TotalCostLabel = new System.Windows.Forms.Label();
+            this.ShippingTypeLabel = new System.Windows.Forms.Label();
             this.CloseButton = new System.Windows.Forms.Button();
             this.QuotesTable.SuspendLayout();
             this.SuspendLayout();
@@ -123,17 +123,6 @@
             this.DeskCostLabel.TabIndex = 4;
             this.DeskCostLabel.Text = "Desk Price";
             // 
-            // ShippingTypeLabel
-            // 
-            this.ShippingTypeLabel.AutoSize = true;
-            this.ShippingTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShippingTypeLabel.Location = new System.Drawing.Point(842, 1);
-            this.ShippingTypeLabel.Name = "ShippingTypeLabel";
-            this.ShippingTypeLabel.Padding = new System.Windows.Forms.Padding(3);
-            this.ShippingTypeLabel.Size = new System.Drawing.Size(90, 46);
-            this.ShippingTypeLabel.TabIndex = 5;
-            this.ShippingTypeLabel.Text = "Shipping Speed";
-            // 
             // ShippingCostLabel
             // 
             this.ShippingCostLabel.AutoSize = true;
@@ -156,6 +145,17 @@
             this.TotalCostLabel.TabIndex = 7;
             this.TotalCostLabel.Text = "Total Price";
             // 
+            // ShippingTypeLabel
+            // 
+            this.ShippingTypeLabel.AutoSize = true;
+            this.ShippingTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShippingTypeLabel.Location = new System.Drawing.Point(842, 1);
+            this.ShippingTypeLabel.Name = "ShippingTypeLabel";
+            this.ShippingTypeLabel.Padding = new System.Windows.Forms.Padding(3);
+            this.ShippingTypeLabel.Size = new System.Drawing.Size(90, 46);
+            this.ShippingTypeLabel.TabIndex = 5;
+            this.ShippingTypeLabel.Text = "Shipping Speed";
+            // 
             // CloseButton
             // 
             this.CloseButton.Location = new System.Drawing.Point(1114, 605);
@@ -174,7 +174,7 @@
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.QuotesTable);
             this.Name = "ViewAllQuotes";
-            this.Text = "ViewAllQuotes";
+            this.Text = "View Quotes";
             this.QuotesTable.ResumeLayout(false);
             this.QuotesTable.PerformLayout();
             this.ResumeLayout(false);

@@ -71,6 +71,7 @@
             this.SearchQuotesButton.TabIndex = 3;
             this.SearchQuotesButton.Text = "&Search Quotes";
             this.SearchQuotesButton.UseVisualStyleBackColor = true;
+            this.SearchQuotesButton.Click += new System.EventHandler(this.SearchQuotesButton_Click);
             // 
             // ExitButton
             // 

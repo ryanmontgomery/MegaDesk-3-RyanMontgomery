@@ -15,6 +15,18 @@ namespace MegaDesk_3_RyanMontgomery
         public SearchQuotes()
         {
             InitializeComponent();
+
+            ComboBoxMaterials.DataSource = ((Desk.Materials[])Enum.GetValues(typeof(Desk.Materials))).ToList();
+        }
+
+        private void AddQuoteCancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void SubmitQuoteButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
